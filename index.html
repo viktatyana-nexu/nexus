@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Yandex.Metrika counter (Твой номер 106829751) -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru', 'ym');
+        ym(106829751, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <!-- ФАВИКОН (Тот самый золотой бриллиант во вкладке) -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com">
+    <link rel="apple-touch-icon" href="https://img.icons8.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #bf953f; --light-gold: #ffd700; --bg: #010d0a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; text-align: center; background-image: radial-gradient(circle at center, rgba(191, 149, 63, 0.2) 0%, #010d0a 100%); overflow-x: hidden; }
+        
+        /* ЗОЛОТАЯ НАВИГАЦИЯ */
+        nav { position: fixed; top: 0; left: 0; width: 100%; padding: 20px; background: rgba(0,0,0,0.95); border-bottom: 3px solid var(--gold); z-index: 1000; backdrop-filter: blur(10px); display: flex; justify-content: center; }
+        .brand { 
+            font-family: 'Montserrat'; font-size: clamp(14px, 4vw, 24px); font-weight: 900; letter-spacing: 3px; 
+            text-transform: uppercase; color: var(--light-gold); 
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); 
+            display: flex; align-items: center; gap: 10px;
+            animation: brandPulse 3s infinite alternate;
+        }
+        @keyframes brandPulse { from { filter: brightness(1); } to { filter: brightness(1.3) drop-shadow(0 0 10px gold); } }
+
+        /* КАРТОЧКИ И СЕТКИ */
+        .main-section { padding-top: 130px; padding-bottom: 50px; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .complex-wrapper { display: flex; justify-content: center; gap: 20px; padding: 10px; flex-wrap: wrap; max-width: 1450px; }
+        .side-column { display: flex; flex-direction: column; gap: 15px; width: 360px; }
+        .side-tile, .tile-small { background: #0a0a0a; border: 2.5px solid var(--gold); border-radius: 40px; padding: 30px; text-align: left; text-decoration: none; color: white; min-height: 250px; transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
+        .side-tile:hover, .tile-small:hover { transform: translateY(-10px); border-color: #fff; box-shadow: 0 15px 40px rgba(191,149,63,0.4); }
+        .card { width: 420px; min-height: 780px; border-radius: 65px; border: 5px solid #fff; background: linear-gradient(165deg, var(--light-gold), #ff8c00); color: #000; padding: 50px; text-align: left; transition: 0.6s; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); position: relative; overflow: hidden; }
+        .card:hover { transform: scale(1.02); animation: cardGlow 1.5s infinite; }
+        @keyframes cardGlow { 0%, 100% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); } 50% { box-shadow: 0 0 80px rgba(255, 215, 0, 0.7); } }
+        .offers-grid { display: flex; justify-content: center; gap: 15px; padding: 20px; max-width: 1800px; margin: 0 auto; flex-wrap: wrap; }
+        .tile-small { width: 375px; min-height: 280px; }
+        .btn-tile { padding: 18px; border-radius: 25px; font-size: 13px; font-weight: 900; text-transform: uppercase; text-align: center; display: block; border: 2px solid #fff; margin-top: 15px; text-decoration: none; transition: 0.3s; }
+        .neon-divider { width: 100%; height: 3px; background: var(--gold); margin: 60px 0 40px; box-shadow: 0 0 30px var(--gold); position: relative; }
+        .neon-text { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #010d0a; padding: 0 30px; color: var(--gold); font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* ЗВЕРИ И ПУЗЫРИ */
+        .assistant { position: fixed; bottom: 20px; width: 75px; height: 75px; border-radius: 50%; z-index: 2000; display: flex; align-items: center; justify-content: center; font-size: 45px; cursor: pointer; border: 3px solid #fff; transition: 0.4s; }
+        #fox-assistant { right: 20px; background: var(--gold); box-shadow: 0 0 20px gold; }
+        #squirrel-assistant { left: 20px; background: #e67e22; box-shadow: 0 0 20px #e67e22; transform: translateX(-150%); }
+        #squirrel-assistant.active { transform: translateX(0); }
+        .bubble { position: fixed; bottom: 110px; background: white; color: black; padding: 15px 20px; border-radius: 25px; width: 260px; font-size: 14px; font-weight: 900; display: none; z-index: 2001; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 3px solid var(--gold); text-align: left; }
+        #fox-bubble { right: 25px; border-bottom-right-radius: 5px; }
+        #squirrel-bubble { left: 25px; border-bottom-left-radius: 5px; border-color: #e67e22; }
+
+        /* ФУТЕР И ПЛАШКИ */
+        footer { padding: 60px 20px; background: linear-gradient(to top, #000, transparent); margin-top: 50px; }
+        .agency-info { max-width: 900px; margin: 0 auto; font-size: 11px; line-height: 1.5; color: rgba(255,255,255,0.4); text-align: center; }
+        .informer-link img { border: 1px solid var(--gold); border-radius: 8px; transition: 0.3s; opacity: 0.7; }
+        .informer-link:hover img { opacity: 1; transform: scale(1.1); box-shadow: 0 0 15px gold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="brand">
+        <span style="filter: drop-shadow(0 0 5px gold);">💎</span> 
+        НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026 
+        <span style="filter: drop-shadow(0 0 5px gold);">💎</span>
+    </div>
+</nav>
+
+<div id="fox-bubble" class="bubble"></div>
+<div id="squirrel-bubble" class="bubble"></div>
+<div id="fox-assistant" class="assistant">🦊</div>
+<div id="squirrel-assistant" class="assistant">🐿️</div>
+
+<!-- ЭТАЖ 1 (3+1+3) -->
+<section class="main-section">
+    <div class="complex-wrapper">
+        <div class="side-column">
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('До 5 млн ₽ за 2 минуты!','Бери, пока дают! Деньги лишними не бывают!')" onmouseleave="hL()">
+                <h3>КРЕДИТ НАЛИЧНЫМИ</h3><p>Одобрение онлайн по паспорту. Деньги на карту в тот же день.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ПОЛУЧИТЬ</div>
+            </a>
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Крупный кредит под залог.','Твоя недвижка — твоя сила! Одобрят 100%!')" onmouseleave="hL()">
+                <h3>ПОД ЗАЛОГ (30М)</h3><p>До 30 000 000 ₽ на 15 лет. Всё остается у вас.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ОФОРМИТЬ</div>
+            </a>
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Инвест для бизнеса за 1 день.','Для ИП это просто находка, прыгай в дамки!')" onmouseleave="hL()">
+                <h3>БИЗНЕС-КРЕДИТ</h3><p>До 10 000 000 ₽ без залога и поручителей.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ВЗЯТЬ</div>
+            </a>
+        </div>
+        <div class="card" onmouseenter="both('Карта Black. 0 ₽ навсегда!','Это база! Кэшбэк тут просто дикий, заказывай!')" onmouseleave="hL()">
+            <div><h2 style="font-size:38px;">T-BANK BLACK</h2><div style="background:rgba(255,255,255,0.3); padding:25px; border-radius:35px; margin:30px 0; font-weight:700;">💎 0 ₽ обслуживание НАВСЕГДА<br>💰 Кэшбэк до 100% рублями<br>🌍 Снятие 0 ₽ везде</div></div>
+            <a href="https://t-cpa.ru" target="_blank" class="btn-tile" style="background:#000; color:#fff; border:none; padding:20px;">ЗАКАЗАТЬ КАРТУ</a>
+        </div>
+        <div class="side-column">
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Зарплата от 100к!','Стань крутым спецом, Лис плохого не посоветует!')" onmouseleave="hL()">
+                <h3>КОМАНДА ЛИДЕРОВ</h3><p>Белая зарплата, премии и свободный график.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">В КОМАНДУ</div>
+            </a>
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('ИП за 0 ₽ онлайн.','Никаких очередей, всё сделают за тебя!')" onmouseleave="hL()">
+                <h3>РЕГИСТРАЦИЯ ИП</h3><p>Счет и бухгалтерия в подарок за 0 ₽.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ОТКРЫТЬ</div>
+            </a>
+            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Престижная работа в офисе.','Карьерный рост обеспечен, хватай удачу!')" onmouseleave="hL()">
+                <h3>HR ОФОРМЛЕНИЕ</h3><p>ДМС, льготная ипотека и рост.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ВАКАНСИИ</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ЭТАЖ 2 -->
+<div class="neon-divider"><div class="neon-text">ПРЕДЛОЖЕНИЯ БАНКА</div></div>
+<div class="offers-grid">
+    <a href="#" class="tile-small" onmouseenter="both('Детская карта 0 ₽.','Учи мелкого копить с детства!')" onmouseleave="hL()"><h3>JUNIOR</h3><p>7-14 лет. Стикеры и обучение.</p><div class="btn-tile">ДЕТЯМ</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('Кэшбэк до 100%.','Верни свои деньги до копейки!')" onmouseleave="hL()"><h3>МАРАФОН</h3><p>Участвуй в челленджах месяца.</p><div class="btn-tile">УЧАСТВОВАТЬ</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('Вклады 18%.','Деньги должны работать!')" onmouseleave="hL()"><h3>ВКЛАДЫ</h3><p>Доход до 18% годовых. АСВ.</p><div class="btn-tile">ОТКРЫТЬ</div></a>
+    <a href="#" class="tile-small" style="border-color:#ffd700;" onmouseenter="both('VIP статус.','Бизнес-залы и личный менеджер!')" onmouseleave="hL()"><h3>PREMIUM</h3><p>Сервис высшего уровня.</p><div class="btn-tile" style="background:#ffd700; color:#000; border:none;">VIP</div></a>
+</div>
+
+<!-- ЭТАЖ 3 -->
+<div class="neon-divider"><div class="neon-text">ЗАЙМЫ 0% И МАРКЕТ</div></div>
+<div id="market" class="offers-grid">
+    <a href="#" class="tile-small" style="border-color:#ff0000;" onmouseenter="both('Облако 1 ТБ.','Миллион фоток влезет! Бери!')" onmouseleave="hL()"><h3>ЯНДЕКС 360</h3><p>Почта без рекламы.</p><div class="btn-tile">ВКЛЮЧИТЬ</div></a>
+    <a href="#" class="tile-small" style="border-color:#ffcc00;" onmouseenter="both('Кэшбэк 9.6%.','Дешевле только даром, хватай!')" onmouseleave="hL()"><h3>BEELINE</h3><p>Смартфоны и тарифы.</p><div class="btn-tile">В МАГАЗИН</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('0% на 15 дней.','За 2 минуты на карту, это магия!')" onmouseleave="hL()"><h3>КРЕДИСКА</h3><p>Первый бесплатно.</p><div class="btn-tile">ВЗЯТЬ 0%</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('Хурма 0%.','Вкусная тема, никаких справок!')" onmouseleave="hL()"><h3>ХУРМА</h3><p>Только по паспорту.</p><div class="btn-tile">ПОЛУЧИТЬ</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('Лидер рынка РФ.','Народный выбор, всё честно!')" onmouseleave="hL()"><h3>MONEYMAN</h3><p>0% на 15 дней.</p><div class="btn-tile">ВЗЯТЬ</div></a>
+    <a href="#" class="tile-small" onmouseenter="both('Деньги за секунды.','Скорость — наше всё!')" onmouseleave="hL()"><h3>ТУРБОЗАЙМ</h3><p>Минимум документов.</p><div class="btn-tile">ВЗЯТЬ</div></a>
+</div>
+
+<footer>
+    <!-- ИНФОРМЕР (Цифры в реальном времени) -->
+    <div style="margin-bottom: 25px;">
+        <a href="https://metrika.yandex.ru" target="_blank" rel="nofollow" class="informer-link">
+            <img src="https://informer.yandex.ru" style="width:88px; height:31px;" alt="Яндекс.Метрика" title="Данные за сегодня" />
+        </a>
+    </div>
+
+    <div class="agency-info">
+        <b>ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ:</b> Данный сайт является рекламной витриной и не является банком. Мы выступаем в роли <b>рекламного агента</b>. 
+        Все условия уточняйте на сайтах партнеров. © НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026.
+    </div>
+</footer>
+
+<script>
+    const fB = document.getElementById('fox-bubble');
+    const sB = document.getElementById('squirrel-bubble');
+    const fox = document.getElementById('fox-assistant');
+    const squirrel = document.getElementById('squirrel-assistant');
+
+    function both(fT, sT) {
+        fB.innerHTML = fT; sB.innerHTML = sT;
+        fB.style.display = 'block'; 
+        if(squirrel.classList.contains('active')) sB.style.display = 'block';
+        fox.style.transform = 'scale(1.1) rotate(-5deg)';
+        if(squirrel.classList.contains('active')) squirrel.style.transform = 'scale(1.1) rotate(5deg)';
+    }
+
+    function hL() { 
+        fB.style.display = 'none'; sB.style.display = 'none';
+        fox.style.transform = 'scale(1)'; squirrel.style.transform = 'scale(1)';
+    }
+
+    window.onload = () => {
+        setTimeout(() => { 
+            both("Система онлайн, Метрика тикает!","Бриллианты горят, всё чики-пуки!"); 
+            setTimeout(hL, 5000); 
+        }, 1000);
+        setTimeout(() => { squirrel.classList.add('active'); }, 5000);
+    };
+
+    squirrel.onclick = () => {
+        both("Прыгаем к займам?","Там сейчас самая жара, погнали!");
+        document.getElementById('market').scrollIntoView();
+        setTimeout(hL, 4000);
+    };
+</script>
+</body>
+</html>
