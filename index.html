@@ -1,187 +1,197 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Yandex.Metrika counter (Твой номер 106829751) -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru', 'ym');
-        ym(106829751, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-    <!-- ФАВИКОН (Тот самый золотой бриллиант во вкладке) -->
-    <link rel="icon" type="image/png" href="https://img.icons8.com">
-    <link rel="apple-touch-icon" href="https://img.icons8.com">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026</title>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date(); k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru", "ym");
+       ym(106829751, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
     <style>
         :root { --gold: #bf953f; --light-gold: #ffd700; --bg: #010d0a; }
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; text-align: center; background-image: radial-gradient(circle at center, rgba(191, 149, 63, 0.2) 0%, #010d0a 100%); overflow-x: hidden; }
-        
-        /* ЗОЛОТАЯ НАВИГАЦИЯ */
-        nav { position: fixed; top: 0; left: 0; width: 100%; padding: 20px; background: rgba(0,0,0,0.95); border-bottom: 3px solid var(--gold); z-index: 1000; backdrop-filter: blur(10px); display: flex; justify-content: center; }
-        .brand { 
-            font-family: 'Montserrat'; font-size: clamp(14px, 4vw, 24px); font-weight: 900; letter-spacing: 3px; 
-            text-transform: uppercase; color: var(--light-gold); 
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); 
-            display: flex; align-items: center; gap: 10px;
-            animation: brandPulse 3s infinite alternate;
-        }
-        @keyframes brandPulse { from { filter: brightness(1); } to { filter: brightness(1.3) drop-shadow(0 0 10px gold); } }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--bg); color: white; text-align: center; background-image: radial-gradient(circle at center, rgba(191, 149, 63, 0.2) 0%, #010d0a 100%); overflow-x: hidden; }
+        nav { position: fixed; top: 0; left: 0; width: 100%; padding: 20px; background: rgba(0,0,0,0.95); border-bottom: 3px solid var(--gold); z-index: 1000; display: flex; justify-content: center; }
+        .brand { font-size: clamp(14px, 4vw, 24px); font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: var(--light-gold); text-shadow: 0 0 15px gold; }
 
-        /* КАРТОЧКИ И СЕТКИ */
-        .main-section { padding-top: 130px; padding-bottom: 50px; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        section { padding-top: 130px; padding-bottom: 50px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .complex-wrapper { display: flex; justify-content: center; gap: 20px; padding: 10px; flex-wrap: wrap; max-width: 1450px; }
-        .side-column { display: flex; flex-direction: column; gap: 15px; width: 360px; }
-        .side-tile, .tile-small { background: #0a0a0a; border: 2.5px solid var(--gold); border-radius: 40px; padding: 30px; text-align: left; text-decoration: none; color: white; min-height: 250px; transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
-        .side-tile:hover, .tile-small:hover { transform: translateY(-10px); border-color: #fff; box-shadow: 0 15px 40px rgba(191,149,63,0.4); }
-        .card { width: 420px; min-height: 780px; border-radius: 65px; border: 5px solid #fff; background: linear-gradient(165deg, var(--light-gold), #ff8c00); color: #000; padding: 50px; text-align: left; transition: 0.6s; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); position: relative; overflow: hidden; }
-        .card:hover { transform: scale(1.02); animation: cardGlow 1.5s infinite; }
-        @keyframes cardGlow { 0%, 100% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); } 50% { box-shadow: 0 0 80px rgba(255, 215, 0, 0.7); } }
-        .offers-grid { display: flex; justify-content: center; gap: 15px; padding: 20px; max-width: 1800px; margin: 0 auto; flex-wrap: wrap; }
-        .tile-small { width: 375px; min-height: 280px; }
-        .btn-tile { padding: 18px; border-radius: 25px; font-size: 13px; font-weight: 900; text-transform: uppercase; text-align: center; display: block; border: 2px solid #fff; margin-top: 15px; text-decoration: none; transition: 0.3s; }
-        .neon-divider { width: 100%; height: 3px; background: var(--gold); margin: 60px 0 40px; box-shadow: 0 0 30px var(--gold); position: relative; }
-        .neon-text { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #010d0a; padding: 0 30px; color: var(--gold); font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        .side-column { display: flex; flex-direction: column; gap: 15px; width: 350px; }
+        
+        .tile { background: #0a0a0a; border: 2.5px solid var(--gold); border-radius: 35px; padding: 25px; text-align: left; text-decoration: none; color: white; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+        .tile:hover { transform: translateY(-7px); border-color: #fff; box-shadow: 0 10px 30px rgba(191,149,63,0.4); }
+        .side-tile { min-height: 260px; }
+        
+        .card { width: 420px; min-height: 720px; border-radius: 65px; border: 5px solid #fff; background: linear-gradient(165deg, var(--light-gold), #ff8c00); color: #000; padding: 45px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 0 30px gold; }
+        
+        .btn-large { padding: 20px; border-radius: 25px; font-size: 15px; font-weight: 900; text-transform: uppercase; text-align: center; border: none; display: block; text-decoration: none; margin-top: 15px; background: var(--gold); color: #000; transition: 0.3s; }
+        .btn-large:hover { background: #fff; transform: scale(1.03); }
 
-        /* ЗВЕРИ И ПУЗЫРИ */
-        .assistant { position: fixed; bottom: 20px; width: 75px; height: 75px; border-radius: 50%; z-index: 2000; display: flex; align-items: center; justify-content: center; font-size: 45px; cursor: pointer; border: 3px solid #fff; transition: 0.4s; }
-        #fox-assistant { right: 20px; background: var(--gold); box-shadow: 0 0 20px gold; }
-        #squirrel-assistant { left: 20px; background: #e67e22; box-shadow: 0 0 20px #e67e22; transform: translateX(-150%); }
-        #squirrel-assistant.active { transform: translateX(0); }
-        .bubble { position: fixed; bottom: 110px; background: white; color: black; padding: 15px 20px; border-radius: 25px; width: 260px; font-size: 14px; font-weight: 900; display: none; z-index: 2001; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 3px solid var(--gold); text-align: left; }
-        #fox-bubble { right: 25px; border-bottom-right-radius: 5px; }
-        #squirrel-bubble { left: 25px; border-bottom-left-radius: 5px; border-color: #e67e22; }
+        .btn-tile { padding: 16px; border-radius: 22px; font-size: 13px; font-weight: 900; text-transform: uppercase; text-align: center; border: 2px solid #fff; display: block; text-decoration: none; margin-top: 8px; }
+        .tag { color: #2ecc71; font-weight: 900; font-size: 11px; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding: 20px; max-width: 1450px; width: 100%; margin: 0 auto; }
+        .mini-tile { min-height: 320px; border-radius: 45px; border-width: 3px; }
+        .mini-tile p { font-size: 14px; line-height: 1.4; color: #ccc; }
+        .mini-tile b { color: #fff; }
 
-        /* ФУТЕР И ПЛАШКИ */
-        footer { padding: 60px 20px; background: linear-gradient(to top, #000, transparent); margin-top: 50px; }
-        .agency-info { max-width: 900px; margin: 0 auto; font-size: 11px; line-height: 1.5; color: rgba(255,255,255,0.4); text-align: center; }
-        .informer-link img { border: 1px solid var(--gold); border-radius: 8px; transition: 0.3s; opacity: 0.7; }
-        .informer-link:hover img { opacity: 1; transform: scale(1.1); box-shadow: 0 0 15px gold; }
+        .divider { width: 100%; height: 2px; background: var(--gold); margin: 50px 0; position: relative; box-shadow: 0 0 15px var(--gold); }
+        .divider-text { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #010d0a; padding: 0 25px; color: var(--gold); font-weight: 900; text-transform: uppercase; font-size: 14px; white-space: nowrap; }
+
+        .as-wrap { position: fixed; bottom: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+        #fox-wrap { right: 20px; } #sq-wrap { left: 20px; }
+        .as-img { width: 95px; height: 95px; background: rgba(0,0,0,0.9); border: 3px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 55px; box-shadow: 0 0 25px gold; }
+        .bubble { background: white; color: black; padding: 18px; border-radius: 25px; font-size: 14px; font-weight: 900; width: 240px; margin-bottom: 15px; display: none; border: 3px solid var(--gold); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="brand">
-        <span style="filter: drop-shadow(0 0 5px gold);">💎</span> 
-        НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026 
-        <span style="filter: drop-shadow(0 0 5px gold);">💎</span>
-    </div>
-</nav>
+<nav><div class="brand">💎 НИКСУС | ПРЕМЬЕР 2026 💎</div></nav>
 
-<div id="fox-bubble" class="bubble"></div>
-<div id="squirrel-bubble" class="bubble"></div>
-<div id="fox-assistant" class="assistant">🦊</div>
-<div id="squirrel-assistant" class="assistant">🐿️</div>
+<div id="fox-wrap" class="as-wrap"><div id="fb" class="bubble"></div><div class="as-img">🦊</div></div>
+<div id="sq-wrap" class="as-wrap"><div id="sb" class="bubble"></div><div class="as-img">🐿️</div></div>
 
-<!-- ЭТАЖ 1 (3+1+3) -->
-<section class="main-section">
+<!-- ЭТАЖ 1 -->
+<section>
     <div class="complex-wrapper">
         <div class="side-column">
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('До 5 млн ₽ за 2 минуты!','Бери, пока дают! Деньги лишними не бывают!')" onmouseleave="hL()">
-                <h3>КРЕДИТ НАЛИЧНЫМИ</h3><p>Одобрение онлайн по паспорту. Деньги на карту в тот же день.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ПОЛУЧИТЬ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile" 
+               onmouseover="talk('Лиса: Одобрят 5 млн за 2 минуты!','Белка: Глянь Joy Money внизу, там до 100к без отказов!')">
+                <span class="tag">БЕСТСЕЛЛЕР</span>
+                <h3>КРЕДИТ НАЛИЧНЫМИ</h3>
+                <p>До <b>5 000 000 ₽</b> только по паспорту. Ставка от 14.9%. Решение онлайн без справок и визитов в банк.</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ПОЛУЧИТЬ ДЕНЬГИ</div>
             </a>
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Крупный кредит под залог.','Твоя недвижка — твоя сила! Одобрят 100%!')" onmouseleave="hL()">
-                <h3>ПОД ЗАЛОГ (30М)</h3><p>До 30 000 000 ₽ на 15 лет. Всё остается у вас.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ОФОРМИТЬ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile"
+               onmouseover="talk('Лиса: Самая низкая ставка под залог!','Белка: Пс! Квартира или авто остаются у тебя!')">
+                <span class="tag">НИЗКИЙ ПРОЦЕНТ</span>
+                <h3>ПОД ЗАЛОГ (30М)</h3>
+                <p>До <b>30 000 000 ₽</b> на срок до 15 лет. Недвижимость или авто в залоге, но вы ими пользуетесь как раньше.</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ОФОРМИТЬ</div>
             </a>
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Инвест для бизнеса за 1 день.','Для ИП это просто находка, прыгай в дамки!')" onmouseleave="hL()">
-                <h3>БИЗНЕС-КРЕДИТ</h3><p>До 10 000 000 ₽ без залога и поручителей.</p><div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ВЗЯТЬ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile"
+               onmouseover="talk('Лиса: Деньги на бизнес сегодня!','Белка: Без залога и поручителей до 10 млн!')">
+                <span class="tag">БИЗНЕС</span>
+                <h3>БИЗНЕС-КРЕДИТ</h3>
+                <p>До <b>10 000 000 ₽</b> без залога для ИП и ООО. Решение по одному документу за 1 день.</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ВЗЯТЬ НА БИЗНЕС</div>
             </a>
         </div>
-        <div class="card" onmouseenter="both('Карта Black. 0 ₽ навсегда!','Это база! Кэшбэк тут просто дикий, заказывай!')" onmouseleave="hL()">
-            <div><h2 style="font-size:38px;">T-BANK BLACK</h2><div style="background:rgba(255,255,255,0.3); padding:25px; border-radius:35px; margin:30px 0; font-weight:700;">💎 0 ₽ обслуживание НАВСЕГДА<br>💰 Кэшбэк до 100% рублями<br>🌍 Снятие 0 ₽ везде</div></div>
-            <a href="https://t-cpa.ru" target="_blank" class="btn-tile" style="background:#000; color:#fff; border:none; padding:20px;">ЗАКАЗАТЬ КАРТУ</a>
+        <div class="card" onmouseover="talk('Лиса: Навсегда 0 ₽ за обслуживание!','Белка: Кэшбэк до 100%, не тормози!')">
+            <div>
+                <span class="tag" style="color:#000; border:2px solid #000; padding:2px 8px; border-radius:10px;">ВЫБОР ПРОДАВЦА</span>
+                <h2 style="font-size:38px; font-weight:900; line-height:1; color:#000; margin-top:15px;">T-BANK BLACK</h2>
+                <p style="color:#000; font-weight:700; margin-top:20px; font-size:18px;">
+                    🎁 Кэшбэк до 100% на покупки<br>
+                    🎁 Снятие 0 ₽ в любом банкомате мира<br>
+                    🎁 Обслуживание 0 ₽ НАВСЕГДА<br>
+                    🎁 До 14% годовых на остаток
+                </p>
+            </div>
+            <a href="https://t-cpa.ru" target="_blank" class="btn-tile" style="background:#000; color:#fff; border:none; padding:25px;">ЗАКАЗАТЬ БЕСПЛАТНО</a>
         </div>
         <div class="side-column">
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Зарплата от 100к!','Стань крутым спецом, Лис плохого не посоветует!')" onmouseleave="hL()">
-                <h3>КОМАНДА ЛИДЕРОВ</h3><p>Белая зарплата, премии и свободный график.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">В КОМАНДУ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile">
+                <span class="tag">КАРЬЕРА</span>
+                <h3>СТАТЬ ПАРТНЕРОМ</h3><p>Доход от <b>80 000 ₽</b> в месяц. Свободный график и официальные выплаты от банка.</p>
+                <div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ВСТУПИТЬ</div>
             </a>
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('ИП за 0 ₽ онлайн.','Никаких очередей, всё сделают за тебя!')" onmouseleave="hL()">
-                <h3>РЕГИСТРАЦИЯ ИП</h3><p>Счет и бухгалтерия в подарок за 0 ₽.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ОТКРЫТЬ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile">
+                <span class="tag">БИЗНЕС 0 ₽</span>
+                <h3>РЕГИСТРАЦИЯ ИП</h3><p>Бесплатно откроем бизнес онлайн. <b>Помощь с налогами и бухгалтерией в подарок.</b></p>
+                <div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ОТКРЫТЬ</div>
             </a>
-            <a href="https://t-cpa.ru" target="_blank" class="side-tile" onmouseenter="both('Престижная работа в офисе.','Карьерный рост обеспечен, хватай удачу!')" onmouseleave="hL()">
-                <h3>HR ОФОРМЛЕНИЕ</h3><p>ДМС, льготная ипотека и рост.</p><div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ВАКАНСИИ</div>
+            <a href="https://t-cpa.ru" target="_blank" class="tile side-tile">
+                <span class="tag">РАБОТА</span>
+                <h3>ПРЕДСТАВИТЕЛЬ</h3><p>Доставка карт. <b>Выдаем авто</b>, оплачиваем связь и страховку. Высокие бонусы.</p>
+                <div class="btn-tile" style="background:#2ecc71; color:#000; border:none;">ВАКАНСИИ</div>
             </a>
         </div>
     </div>
 </section>
 
-<!-- ЭТАЖ 2 -->
-<div class="neon-divider"><div class="neon-text">ПРЕДЛОЖЕНИЯ БАНКА</div></div>
-<div class="offers-grid">
-    <a href="#" class="tile-small" onmouseenter="both('Детская карта 0 ₽.','Учи мелкого копить с детства!')" onmouseleave="hL()"><h3>JUNIOR</h3><p>7-14 лет. Стикеры и обучение.</p><div class="btn-tile">ДЕТЯМ</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('Кэшбэк до 100%.','Верни свои деньги до копейки!')" onmouseleave="hL()"><h3>МАРАФОН</h3><p>Участвуй в челленджах месяца.</p><div class="btn-tile">УЧАСТВОВАТЬ</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('Вклады 18%.','Деньги должны работать!')" onmouseleave="hL()"><h3>ВКЛАДЫ</h3><p>Доход до 18% годовых. АСВ.</p><div class="btn-tile">ОТКРЫТЬ</div></a>
-    <a href="#" class="tile-small" style="border-color:#ffd700;" onmouseenter="both('VIP статус.','Бизнес-залы и личный менеджер!')" onmouseleave="hL()"><h3>PREMIUM</h3><p>Сервис высшего уровня.</p><div class="btn-tile" style="background:#ffd700; color:#000; border:none;">VIP</div></a>
+<div class="divider"><div class="divider-text">ЭТАЖ 2: КАТЕГОРИИ Т-БАНКА (ДЕТАЛЬНО)</div></div>
+
+<div class="grid-layout">
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Кэшбэк 10% на всех АЗС!','Белка: Для водителей — это золото!')">
+        <h3>T-DRIVE</h3><p>Для тех, кто за рулем. <b>10% кэшбэк на бензин</b>, 5% на запчасти и сервис. Помощь на дорогах 0 ₽.</p><div class="btn-large">ВЫБРАТЬ DRIVE</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Бесплатно для детей до 14!','Белка: Копилка под 10% годовых!')">
+        <h3>JUNIOR</h3><p><b>Бесплатная карта для детей.</b> Обучение финансам, крутые стикеры и копилка с высоким процентом.</p><div class="btn-large">ДЕТСКАЯ КАРТА</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>INVEST</h3><p>Акции в подарок при открытии счета. <b>Торговля от 10 рублей.</b> Аналитика и советы от профи.</p><div class="btn-large">ИНВЕСТИРОВАТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>ALL AIRLINES</h3><p><b>Кэшбэк милями до 10%.</b> Бесплатная страховка для путешествий по всему миру в комплекте.</p><div class="btn-large">В ПОЛЕТ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>PREMIUM</h3><p><b>Личный менеджер 24/7.</b> Доступ в бизнес-залы. Металлическая карта и повышенный доход.</p><div class="btn-large">ПРЕМИУМ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>SIM-CARD</h3><p><b>Связь 0 ₽ при тратах по карте.</b> Неделя бесплатно. Безлимит на мессенджеры и соцсети.</p><div class="btn-large">ЗАКАЗАТЬ СИМ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>SME BUSINESS</h3><p>Счет для ООО и ИП. <b>Бухгалтерия онлайн 0 ₽.</b> Переводы физлицам до 1 млн без комиссии.</p><div class="btn-large">БИЗНЕС-СЧЕТ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>DEPOSIT</h3><p>Вклады с доходом до <b>21% годовых.</b> Пополнение и снятие в любой момент. Управление в приложении.</p><div class="btn-large">ОТКРЫТЬ ВКЛАД</div>
+    </a>
 </div>
 
-<!-- ЭТАЖ 3 -->
-<div class="neon-divider"><div class="neon-text">ЗАЙМЫ 0% И МАРКЕТ</div></div>
-<div id="market" class="offers-grid">
-    <a href="#" class="tile-small" style="border-color:#ff0000;" onmouseenter="both('Облако 1 ТБ.','Миллион фоток влезет! Бери!')" onmouseleave="hL()"><h3>ЯНДЕКС 360</h3><p>Почта без рекламы.</p><div class="btn-tile">ВКЛЮЧИТЬ</div></a>
-    <a href="#" class="tile-small" style="border-color:#ffcc00;" onmouseenter="both('Кэшбэк 9.6%.','Дешевле только даром, хватай!')" onmouseleave="hL()"><h3>BEELINE</h3><p>Смартфоны и тарифы.</p><div class="btn-tile">В МАГАЗИН</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('0% на 15 дней.','За 2 минуты на карту, это магия!')" onmouseleave="hL()"><h3>КРЕДИСКА</h3><p>Первый бесплатно.</p><div class="btn-tile">ВЗЯТЬ 0%</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('Хурма 0%.','Вкусная тема, никаких справок!')" onmouseleave="hL()"><h3>ХУРМА</h3><p>Только по паспорту.</p><div class="btn-tile">ПОЛУЧИТЬ</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('Лидер рынка РФ.','Народный выбор, всё честно!')" onmouseleave="hL()"><h3>MONEYMAN</h3><p>0% на 15 дней.</p><div class="btn-tile">ВЗЯТЬ</div></a>
-    <a href="#" class="tile-small" onmouseenter="both('Деньги за секунды.','Скорость — наше всё!')" onmouseleave="hL()"><h3>ТУРБОЗАЙМ</h3><p>Минимум документов.</p><div class="btn-tile">ВЗЯТЬ</div></a>
+<div class="divider"><div class="divider-text">ЭТАЖ 3: МАРКЕТПЛЕЙС И ЗАЙМЫ (ВИРИНА 2026)</div></div>
+
+<div class="grid-layout" style="padding-bottom: 100px;">
+    <a href="https://ficca2021.com" target="_blank" class="tile mini-tile" style="border-color:red;"><h3>ЯНДЕКС 360</h3><p><b>1 ТБ места на Диске.</b> Почта без рекламы и красивые адреса. Безлимит для фото и видео.</p><div class="btn-tile" style="background:red; border:none;">ПОДКЛЮЧИТЬ</div></a>
+    <a href="https://rcpsj.com" target="_blank" class="tile mini-tile" style="border-color:yellow;"><h3>БИЛАЙН</h3><p>Магазин техники. <b>Кэшбэк до 9%.</b> Смартфоны и гаджеты в рассрочку 0-0-24.</p><div class="btn-tile" style="background:yellow; color:#000; border:none;">В МАГАЗИН</div></a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" style="border-color:orange;"><h3>MI-SHOP</h3><p>Xiaomi техника. <b>Гарантия 2 года.</b> Скидки до 15% на смартфоны и умный дом.</p><div class="btn-tile" style="background:orange; border:none;">ВЫБРАТЬ</div></a>
+    
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Первый займ ПОД 0%!','Белка: Глянь Веббанкир, там тоже бесплатно!')">
+        <h3>МКК КРЕДИСКА</h3><p>Займ до 50 000 ₽. <b>Первый займ 0%.</b> Решение онлайн за 2 минуты. Нужен только паспорт РФ.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ВЗЯТЬ ПОД 0%</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Одобрят 100к сразу!','Белка: Срок до полугода, выгодно!')">
+        <h3>JOY MONEY</h3><p>До <b>100 000 ₽</b> на срок до 168 дней. Высокое одобрение для всех категорий граждан.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ПОЛУЧИТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Решение за 1 минуту!','Белка: Первый займ бесплатно, хватай!')">
+        <h3>WEBBANKIR</h3><p>Займы онлайн 24/7. <b>Первый займ под 0%.</b> Перевод на любую карту моментально.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ВЗЯТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Одобрение с любой КИ!','Белка: Пс! Тут реально не смотрят на долги!')">
+        <h3>ZAYMIGO</h3><p>До 30 000 ₽. <b>Одобряют даже с плохой историей.</b> Моментальное перечисление денег.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ЗАБРАТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile" onmouseover="talk('Лиса: Честный займ без скрытых допов!','Белка: Глянь Хурму, там тоже быстро!')">
+        <h3>ECOZAYM</h3><p>До 30 000 ₽. <b>Никаких страховок и комиссий.</b> Прозрачные условия и удобное продление.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ВЗЯТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile">
+        <h3>ХУРМА</h3><p>До 50 000 ₽. <b>Современный займ онлайн.</b> Работают 24/7 без праздников и выходных.</p><div class="btn-tile" style="background:var(--gold); color:#000;">ЗАБРАТЬ</div>
+    </a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile"><h3>495 КРЕДИТ</h3><p>До 20 000 ₽. <b>Моментально по СМС.</b> Без звонков оператора. Деньги на карту за 5 мин.</p><div class="btn-tile">ВЗЯТЬ</div></a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile"><h3>ДЕНЬГИ ОК</h3><p>До 20 000 ₽. <b>Только паспорт РФ.</b> Одобрение пенсионерам и студентам.</p><div class="btn-tile">ОФОРМИТЬ</div></a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile"><h3>BOOSTRA</h3><p>До 100 000 ₽. <b>На долгий срок.</b> Без залога и поручителей. Решение онлайн.</p><div class="btn-tile">ВЗЯТЬ</div></a>
+    <a href="https://t-cpa.ru" target="_blank" class="tile mini-tile"><h3>НАДО ДЕНЕГ</h3><p>До 30 000 ₽. <b>Первый займ 0%.</b> Одобрение за минуту. Без звонков родственникам.</p><div class="btn-tile">ВЗЯТЬ</div></a>
 </div>
 
-<footer>
-    <!-- ИНФОРМЕР (Цифры в реальном времени) -->
-    <div style="margin-bottom: 25px;">
-        <a href="https://metrika.yandex.ru" target="_blank" rel="nofollow" class="informer-link">
-            <img src="https://informer.yandex.ru" style="width:88px; height:31px;" alt="Яндекс.Метрика" title="Данные за сегодня" />
+<footer style="padding: 60px 20px; background: rgba(0,0,0,0.9); border-top: 2px solid var(--gold);">
+    <div style="transform: scale(1.6); display: inline-block; margin-bottom: 40px;">
+        <a href="https://metrika.yandex.ru" target="_blank" rel="nofollow">
+            <img src="https://informer.yandex.ru" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" />
         </a>
     </div>
-
-    <div class="agency-info">
-        <b>ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ:</b> Данный сайт является рекламной витриной и не является банком. Мы выступаем в роли <b>рекламного агента</b>. 
-        Все условия уточняйте на сайтах партнеров. © НИКСУС | ПРЕМЬЕР-ХОЛЛ 2026.
+    <div style="font-size: 11px; color: #666; text-align: justify; border-left: 3px solid var(--gold); padding-left: 15px; max-width: 800px; margin: 0 auto;">
+        <b>ЮРИДИЧЕСКАЯ СПРАВКА:</b> Сайт является информационным агрегатором. Мы не выдаем кредиты. Все условия — на сайтах лицензированных партнеров.
     </div>
 </footer>
 
 <script>
-    const fB = document.getElementById('fox-bubble');
-    const sB = document.getElementById('squirrel-bubble');
-    const fox = document.getElementById('fox-assistant');
-    const squirrel = document.getElementById('squirrel-assistant');
-
-    function both(fT, sT) {
-        fB.innerHTML = fT; sB.innerHTML = sT;
-        fB.style.display = 'block'; 
-        if(squirrel.classList.contains('active')) sB.style.display = 'block';
-        fox.style.transform = 'scale(1.1) rotate(-5deg)';
-        if(squirrel.classList.contains('active')) squirrel.style.transform = 'scale(1.1) rotate(5deg)';
+    function talk(f, s) {
+        const fb = document.getElementById('fb'); const sb = document.getElementById('sb');
+        fb.innerText = f; sb.innerText = s;
+        fb.style.display = 'block'; fb.style.opacity = '1';
+        sb.style.display = 'block'; sb.style.opacity = '1';
+        setTimeout(() => { fb.style.display = 'none'; sb.style.display = 'none'; }, 4000);
     }
-
-    function hL() { 
-        fB.style.display = 'none'; sB.style.display = 'none';
-        fox.style.transform = 'scale(1)'; squirrel.style.transform = 'scale(1)';
-    }
-
-    window.onload = () => {
-        setTimeout(() => { 
-            both("Система онлайн, Метрика тикает!","Бриллианты горят, всё чики-пуки!"); 
-            setTimeout(hL, 5000); 
-        }, 1000);
-        setTimeout(() => { squirrel.classList.add('active'); }, 5000);
-    };
-
-    squirrel.onclick = () => {
-        both("Прыгаем к займам?","Там сейчас самая жара, погнали!");
-        document.getElementById('market').scrollIntoView();
-        setTimeout(hL, 4000);
-    };
 </script>
 </body>
 </html>
