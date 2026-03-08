@@ -3,83 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIKTANYA LIFE — Капитал и Отдых</title>
+    <title>🏠 VIKTANYA HOME & TRAVEL 🏠</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #000; overflow: hidden; }
-        .nav-panel { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px 0; text-align: center; z-index: 999; border-bottom: 1px solid #004d4d; }
-        .back-btn { background: #d4af37; color: #000; padding: 12px 40px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
-
-        #life-iframe { width: 100%; height: 100vh; border: none; background: #fff; margin-top: 70px; }
-
-        #life-modal {
-            display:flex; position:fixed; top:0; left:0; width:100%; height:100%; 
-            background: rgba(0, 10, 10, 0.95); z-index: 10000; justify-content:center; align-items:center; 
-            backdrop-filter: blur(20px); transition: all 0.6s ease;
-        }
-
-        .modal-content { display: grid; grid-template-columns: 1fr; gap: 30px; max-width: 600px; width: 95%; text-align: center; }
-        
-        .life-btn { 
-            display:flex; flex-direction:column; justify-content:center; align-items:center;
-            height:190px; color:white !important; text-decoration:none; border-radius:40px; 
-            font-weight:900; font-size:2.2em; transition: all 0.4s ease;
-            position: relative; overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-        }
-        
-        .life-btn:hover { transform: scale(1.03); background: rgba(212, 175, 55, 0.1); border-color: #d4af37; box-shadow: 0 0 50px rgba(212, 175, 55, 0.6); }
-        .life-btn i { font-style: normal; font-size: 1.5em; margin-bottom: 10px; filter: drop-shadow(0 0 10px #d4af37); }
-        .life-btn span { font-size: 0.4em; font-weight: bold; margin-top: 10px; letter-spacing: 2px; color: #d4af37; }
-
-        .fly-up { transform: translateY(-160%) !important; opacity: 0; }
-        .fly-down { transform: translateY(160%) !important; opacity: 0; }
-        .fade-out { opacity: 0; pointer-events: none; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #1a0d00; overflow: hidden; }
+        .nav-panel { position: fixed; top: 0; width: 100%; background: #000; padding: 15px 0; text-align: center; z-index: 999; border-bottom: 2px solid #d4af37; }
+        .back-btn { background: #d4af37; color: #000; padding: 12px 40px; border-radius: 10px; cursor: pointer; border: none; font-weight: bold; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        #home-iframe { width: 100%; height: 100vh; border: none; background: #fff; margin-top: 65px; }
+        #home-modal { display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(26, 13, 0, 0.95); z-index: 10000; justify-content:center; align-items:center; backdrop-filter: blur(15px); }
+        .modal-content { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 500px; width: 92%; text-align: center; }
+        .home-btn { display:flex; flex-direction:column; justify-content:center; align-items:center; height:170px; color:white; text-decoration:none; border-radius:30px; font-weight:900; font-size:1.8em; transition: 0.4s; border: 2px solid #d4af37; background: linear-gradient(135deg, #3d1f00, #1a0d00); }
+        .home-btn:hover { transform: scale(1.03); box-shadow: 0 0 40px #d4af37; filter: brightness(1.2); }
+        .home-btn span { font-size: 0.45em; font-weight: normal; margin-top: 10px; color: #d4af37; letter-spacing: 2px; }
     </style>
 </head>
 <body>
-
-    <div class="nav-panel">
-        <button class="back-btn" onclick="resetMenu()">🏠 ГЛАВНОЕ МЕНЮ LIFE</button>
-    </div>
-
-    <!-- ТВОИ ПОТРОХА LIFE (БЕЗ S) -->
-    <iframe src="http://life.viktanya.ru" id="life-iframe" name="life-iframe" scrolling="yes"></iframe>
-
-    <div id="life-modal">
+    <div class="nav-panel"><button class="back-btn" onclick="document.getElementById('home-modal').style.display='flex'">🏠 МЕНЮ СЕРВИСОВ</button></div>
+    <iframe src="http://home.viktanya.ru" id="home-iframe" name="home-iframe"></iframe>
+    <div id="home-modal">
         <div class="modal-content">
-            <h1 style="color:#d4af37; font-size:2.8em; margin-bottom:10px; text-transform:uppercase; letter-spacing:5px;">Viktanya Life</h1>
-            
-            <a id="btn-debt" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('up')" class="life-btn">
-                <i>⚖️</i> СПИСАТЬ ДОЛГИ <span>СВОБОДА ОТ КРЕДИТОВ (ФЦБ)</span>
+            <h1 style="color:#d4af37; font-size:2.5em; text-transform:uppercase;">Viktanya Home</h1>
+            <a href="http://home.viktanya.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
+                🚂 ЖД БИЛЕТЫ <span>ПОЕЗДА ПО РОССИИ И СНГ</span>
             </a>
-            
-            <a id="btn-invest" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('none')" class="life-btn">
-                <i>📈</i> ВКЛАДЫ ДО 21% <span>СОХРАНИТЬ КАПИТАЛ</span>
-            </a>
-
-            <a id="btn-travel" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('down')" class="life-btn">
-                <i>🌴</i> ОТПУСК И ТУРЫ <span>АВИАБИЛЕТЫ И ОТЕЛИ</span>
+            <a href="http://home.viktanya.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
+                🔑 НЕДВИЖИМОСТЬ <span>АРЕНДА И ПОКУПКА ЖИЛЬЯ</span>
             </a>
         </div>
     </div>
-
-    <script>
-        function animateExit(dir) {
-            if(dir === 'up') document.getElementById('btn-debt').classList.add('fly-up');
-            if(dir === 'down') document.getElementById('btn-travel').classList.add('fly-down');
-            document.getElementById('life-modal').classList.add('fade-out');
-            setTimeout(() => { document.getElementById('life-modal').style.display = 'none'; }, 700);
-        }
-        function resetMenu() {
-            const modal = document.getElementById('life-modal');
-            modal.style.display = 'flex';
-            modal.classList.remove('fade-out');
-            document.getElementById('btn-debt').classList.remove('fly-up');
-            document.getElementById('btn-travel').classList.remove('fly-down');
-        }
-    </script>
 </body>
 </html>
-
