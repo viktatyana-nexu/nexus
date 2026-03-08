@@ -3,73 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIKTANYA PRO — Неоновый Пульт</title>
+    <title>VIKTANYA LIFE — Капитал и Отдых</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #000; overflow: hidden; }
-        .nav-panel { position: fixed; top: 0; width: 100%; background: #000; padding: 15px 0; text-align: center; z-index: 999; border-bottom: 2px solid #222; }
-        .back-btn { background: #f39c12; color: white; padding: 12px 40px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 0 20px rgba(243, 156, 18, 0.5); }
-        #pro-iframe { width: 100%; height: 100vh; border: none; background: #fff; margin-top: 65px; }
-        #pro-modal { display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background: #000; z-index:10000; justify-content:center; align-items:center; backdrop-filter: blur(20px); transition: opacity 0.6s ease; }
-        .modal-content { display: flex; flex-direction: column; gap: 35px; max-width: 500px; width: 92%; text-align: center; }
-        
-        .pro-btn { 
-            position: relative; display:flex; flex-direction:column; justify-content:center; align-items:center;
-            height:220px; color:white !important; text-decoration:none; border-radius:45px; 
-            font-weight:900; font-size:2.2em; transition: all 0.4s ease;
-            background: rgba(255, 255, 255, 0.05); border: 3px solid rgba(255, 255, 255, 0.2);
-            cursor: pointer; overflow: hidden;
+        .nav-panel { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px 0; text-align: center; z-index: 999; border-bottom: 1px solid #004d4d; }
+        .back-btn { background: #d4af37; color: #000; padding: 12px 40px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+
+        #life-iframe { width: 100%; height: 100vh; border: none; background: #fff; margin-top: 70px; }
+
+        #life-modal {
+            display:flex; position:fixed; top:0; left:0; width:100%; height:100%; 
+            background: rgba(0, 10, 10, 0.95); z-index: 10000; justify-content:center; align-items:center; 
+            backdrop-filter: blur(20px); transition: all 0.6s ease;
         }
 
-        .work { border-color: #ff0044 !important; box-shadow: inset 0 0 20px rgba(255, 0, 68, 0.2); }
-        .work:hover { background: #ff0044; box-shadow: 0 0 60px #ff0044; transform: scale(1.05); }
-
-        .biz { border-color: #00bbff !important; box-shadow: inset 0 0 20px rgba(0, 187, 255, 0.2); }
-        .biz:hover { background: #00bbff; box-shadow: 0 0 60px #00bbff; transform: scale(1.05); }
-
-        .pro-btn span.icon { font-size: 1.6em; margin-bottom: 10px; }
-        .pro-btn span.subtext { font-size: 0.4em; font-weight: bold; margin-top: 10px; letter-spacing: 2px; opacity: 0.8; }
+        .modal-content { display: grid; grid-template-columns: 1fr; gap: 30px; max-width: 600px; width: 95%; text-align: center; }
         
+        .life-btn { 
+            display:flex; flex-direction:column; justify-content:center; align-items:center;
+            height:190px; color:white !important; text-decoration:none; border-radius:40px; 
+            font-weight:900; font-size:2.2em; transition: all 0.4s ease;
+            position: relative; overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .life-btn:hover { transform: scale(1.03); background: rgba(212, 175, 55, 0.1); border-color: #d4af37; box-shadow: 0 0 50px rgba(212, 175, 55, 0.6); }
+        .life-btn i { font-style: normal; font-size: 1.5em; margin-bottom: 10px; filter: drop-shadow(0 0 10px #d4af37); }
+        .life-btn span { font-size: 0.4em; font-weight: bold; margin-top: 10px; letter-spacing: 2px; color: #d4af37; }
+
         .fly-up { transform: translateY(-160%) !important; opacity: 0; }
         .fly-down { transform: translateY(160%) !important; opacity: 0; }
         .fade-out { opacity: 0; pointer-events: none; }
     </style>
 </head>
 <body>
+
     <div class="nav-panel">
-        <button class="back-btn" onclick="resetMenu()">🏠 ГЛАВНОЕ МЕНЮ</button>
+        <button class="back-btn" onclick="resetMenu()">🏠 ГЛАВНОЕ МЕНЮ LIFE</button>
     </div>
 
-    <!-- ТУТ МЫ УБРАЛИ "S", ЧТОБЫ ВСЁ ОТКРЫЛОСЬ -->
-    <iframe src="http://pro.viktanya.ru" id="pro-iframe" name="pro-iframe" scrolling="yes"></iframe>
+    <!-- ТВОИ ПОТРОХА LIFE (БЕЗ S) -->
+    <iframe src="http://life.viktanya.ru" id="life-iframe" name="life-iframe" scrolling="yes"></iframe>
 
-    <div id="pro-modal">
+    <div id="life-modal">
         <div class="modal-content">
-            <h1 style="color:white; font-size:2.5em; margin-bottom:15px; text-transform:uppercase;">Viktanya Pro</h1>
-            <a id="btn-work" href="http://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn work">
-                <span class="icon">🏃</span> НАЙТИ РАБОТУ <span class="subtext">З/П ОТ 100 000 ₽</span>
+            <h1 style="color:#d4af37; font-size:2.8em; margin-bottom:10px; text-transform:uppercase; letter-spacing:5px;">Viktanya Life</h1>
+            
+            <a id="btn-debt" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('up')" class="life-btn">
+                <i>⚖️</i> СПИСАТЬ ДОЛГИ <span>СВОБОДА ОТ КРЕДИТОВ (ФЦБ)</span>
             </a>
-            <a id="btn-biz" href="http://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn biz">
-                <span class="icon">💼</span> ОТКРЫТЬ БИЗНЕС <span class="subtext">СЧЕТА ИП И ООО 0₽</span>
+            
+            <a id="btn-invest" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('none')" class="life-btn">
+                <i>📈</i> ВКЛАДЫ ДО 21% <span>СОХРАНИТЬ КАПИТАЛ</span>
+            </a>
+
+            <a id="btn-travel" href="http://life.viktanya.ru" target="life-iframe" onclick="animateExit('down')" class="life-btn">
+                <i>🌴</i> ОТПУСК И ТУРЫ <span>АВИАБИЛЕТЫ И ОТЕЛИ</span>
             </a>
         </div>
     </div>
 
     <script>
-        function animateExit() {
-            document.getElementById('btn-work').classList.add('fly-up');
-            document.getElementById('btn-biz').classList.add('fly-down');
-            document.getElementById('pro-modal').classList.add('fade-out');
-            setTimeout(() => { document.getElementById('pro-modal').style.display = 'none'; }, 700);
+        function animateExit(dir) {
+            if(dir === 'up') document.getElementById('btn-debt').classList.add('fly-up');
+            if(dir === 'down') document.getElementById('btn-travel').classList.add('fly-down');
+            document.getElementById('life-modal').classList.add('fade-out');
+            setTimeout(() => { document.getElementById('life-modal').style.display = 'none'; }, 700);
         }
         function resetMenu() {
-            const modal = document.getElementById('pro-modal');
+            const modal = document.getElementById('life-modal');
             modal.style.display = 'flex';
-            setTimeout(() => {
-                modal.classList.remove('fade-out');
-                document.getElementById('btn-work').classList.remove('fly-up');
-                document.getElementById('btn-biz').classList.remove('fly-down');
-            }, 10);
+            modal.classList.remove('fade-out');
+            document.getElementById('btn-debt').classList.remove('fly-up');
+            document.getElementById('btn-travel').classList.remove('fly-down');
         }
     </script>
 </body>
 </html>
+
