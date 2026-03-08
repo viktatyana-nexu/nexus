@@ -6,78 +6,37 @@
     <title>VIKTANYA PRO — Зеркальный Металлик</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #000; overflow: hidden; }
-        
-        /* ПАНЕЛЬ УПРАВЛЕНИЯ */
         .nav-panel { position: fixed; top: 0; width: 100%; background: #000; padding: 15px 0; text-align: center; z-index: 999; border-bottom: 2px solid #222; }
         .back-btn { background: #f39c12; color: white; padding: 12px 40px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 0 20px rgba(243, 156, 18, 0.5); }
-
-        /* ОКНО С ПОТРОХАМИ */
         #pro-iframe { width: 100%; height: 100vh; border: none; background: #000; margin-top: 65px; }
-
-        /* ГЛАВНАЯ ЗЕРКАЛЬНАЯ ЗАВЕСА */
-        #pro-modal {
-            display:flex; position:fixed; top:0; left:0; width:100%; height:100%; 
-            background: rgba(0, 0, 0, 0.95); z-index:10000; justify-content:center; align-items:center; 
-            backdrop-filter: blur(20px); transition: opacity 0.6s ease;
-        }
-
+        #pro-modal { display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.95); z-index:10000; justify-content:center; align-items:center; backdrop-filter: blur(20px); transition: opacity 0.6s ease; }
         .modal-content { display: flex; flex-direction: column; gap: 35px; max-width: 550px; width: 92%; text-align: center; }
-        
-        /* КНОПКИ — ПОЛИРОВАННОЕ ЗЕРКАЛО */
-        .pro-btn { 
-            position: relative; display:flex; flex-direction:column; justify-content:center; align-items:center;
-            height:220px; color:#111; text-decoration:none; border-radius:45px; 
-            font-weight:900; font-size:2.2em; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 40%, #b0b0b0 50%, #dcdcdc 60%, #ffffff 100%);
-            border: 2px solid #555;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 2px 10px rgba(255,255,255,1);
-            cursor: pointer; overflow: hidden;
-        }
-
-        /* БЛИК НА СТЕКЛЕ */
-        .pro-btn::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 45%;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%);
-            border-radius: 40px 40px 0 0;
-        }
-
+        .pro-btn { position: relative; display:flex; flex-direction:column; justify-content:center; align-items:center; height:220px; color:#111; text-decoration:none; border-radius:45px; font-weight:900; font-size:2.2em; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 40%, #b0b0b0 50%, #dcdcdc 60%, #ffffff 100%); border: 2px solid #555; box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 2px 10px rgba(255,255,255,1); cursor: pointer; overflow: hidden; }
+        .pro-btn::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 45%; background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%); border-radius: 40px 40px 0 0; }
         .pro-btn span.icon { font-size: 1.6em; margin-bottom: 10px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 2; }
         .pro-btn span.subtext { font-size: 0.4em; font-weight: 900; margin-top: 10px; letter-spacing: 2px; color: #222; z-index: 2; }
-
-        /* ПОДСВЕТКА ПРИ НАВЕДЕНИИ */
-        .work:hover { 
-            background: linear-gradient(135deg, #fff 0%, #ffcbd1 100%);
-            color: #ff0044; box-shadow: 0 0 60px rgba(255, 0, 68, 0.9); transform: scale(1.04); 
-        }
-        .biz:hover { 
-            background: linear-gradient(135deg, #fff 0%, #bde4ff 100%);
-            color: #0077ff; box-shadow: 0 0 60px rgba(0, 119, 255, 0.9); transform: scale(1.04); 
-        }
-
-        /* АНИМАЦИЯ РАЗЛЕТА */
+        .work:hover { background: linear-gradient(135deg, #fff 0%, #ffcbd1 100%); color: #ff0044; box-shadow: 0 0 60px rgba(255, 0, 68, 0.9); transform: scale(1.04); }
+        .biz:hover { background: linear-gradient(135deg, #fff 0%, #bde4ff 100%); color: #0077ff; box-shadow: 0 0 60px rgba(0, 119, 255, 0.9); transform: scale(1.04); }
         .fly-up { transform: translateY(-160%) rotate(-5deg) !important; opacity: 0; }
         .fly-down { transform: translateY(160%) rotate(5deg) !important; opacity: 0; }
         .fade-out { opacity: 0; pointer-events: none; }
     </style>
 </head>
 <body>
-
     <div class="nav-panel">
         <button class="back-btn" onclick="resetMenu()">🏠 ВЫБРАТЬ НАПРАВЛЕНИЕ</button>
     </div>
 
-    <!-- ТВОИ ПОТРОХА (РКО И ВАКАНСИИ) -->
-    <iframe src="https://pro.viktanya.ru" id="pro-iframe" name="pro-iframe" scrolling="yes"></iframe>
+    <!-- ИСПРАВЛЕННЫЕ ССЫЛКИ (БЕЗ "S") -->
+    <iframe src="http://pro.viktanya.ru" id="pro-iframe" name="pro-iframe" scrolling="yes"></iframe>
 
     <div id="pro-modal">
         <div class="modal-content">
             <h1 style="color:white; font-size:2.8em; margin-bottom:10px; text-transform:uppercase; letter-spacing:5px;">Viktanya Pro</h1>
-            
-            <a id="btn-work" href="https://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn work">
+            <a id="btn-work" href="http://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn work">
                 <span class="icon">🏃</span> НАЙТИ РАБОТУ <span class="subtext">З/П ОТ 100 000 ₽</span>
             </a>
-            
-            <a id="btn-biz" href="https://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn biz">
+            <a id="btn-biz" href="http://pro.viktanya.ru" target="pro-iframe" onclick="animateExit()" class="pro-btn biz">
                 <span class="icon">💼</span> ОТКРЫТЬ БИЗНЕС <span class="subtext">РЕГИСТРАЦИЯ ИП И СЧЕТА 0₽</span>
             </a>
         </div>
@@ -90,7 +49,6 @@
             document.getElementById('pro-modal').classList.add('fade-out');
             setTimeout(() => { document.getElementById('pro-modal').style.display = 'none'; }, 700);
         }
-
         function resetMenu() {
             const modal = document.getElementById('pro-modal');
             modal.style.display = 'flex';
