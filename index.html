@@ -18,14 +18,18 @@
 </head>
 <body>
     <div class="nav-panel"><button class="back-btn" onclick="document.getElementById('home-modal').style.display='flex'">🏠 МЕНЮ СЕРВИСОВ</button></div>
-    <iframe src="http://home.viktanya.ru" id="home-iframe" name="home-iframe"></iframe>
+    <!-- По умолчанию открываем ЖД билеты -->
+    <iframe src="https://travel.yandex.ru" id="home-iframe" name="home-iframe"></iframe>
+    
     <div id="home-modal">
         <div class="modal-content">
             <h1 style="color:#d4af37; font-size:2.5em; text-transform:uppercase;">Viktanya Home</h1>
-            <a href="http://home.viktanya.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
+            <!-- Исправленная ссылка на ЖД -->
+            <a href="https://travel.yandex.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
                 🚂 ЖД БИЛЕТЫ <span>ПОЕЗДА ПО РОССИИ И СНГ</span>
             </a>
-            <a href="http://home.viktanya.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
+            <!-- Исправленная ссылка на Недвижимость -->
+            <a href="https://realty.ya.ru" target="home-iframe" onclick="document.getElementById('home-modal').style.display='none'" class="home-btn">
                 🔑 НЕДВИЖИМОСТЬ <span>АРЕНДА И ПОКУПКА ЖИЛЬЯ</span>
             </a>
         </div>
